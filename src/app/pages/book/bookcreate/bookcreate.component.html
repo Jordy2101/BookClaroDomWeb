@@ -1,0 +1,27 @@
+<div class="modal-header">
+  Crear Libro
+</div>
+<div class="modal-body">
+  <div class="fv-row mb-7 fv-plugins-icon-container">
+    <label class="required fw-bold fs-6 mb-2">Fecha de Publicacion</label>
+    <input  maxlength="50" type="date" name="publishDate" class="form-control form-control-solid mb-3 mb-lg-0"
+      [(ngModel)]="item.publishDate">
+    <div class="fv-plugins-message-container invalid-feedback"></div>
+  </div>
+  <div class="fv-row mb-7 fv-plugins-icon-container">
+    <label class="required fw-bold fs-6 mb-2">Cantidad de Pagina</label>
+    <input  maxlength="50" type="number" name="pageCount" class="form-control form-control-solid mb-3 mb-lg-0"
+      [(ngModel)]="item.pageCount">
+    <div class="fv-plugins-message-container invalid-feedback"></div>
+  </div>
+  <div class="fv-row mb-7 fv-plugins-icon-container">
+    <label class="required fw-bold fs-6 mb-2">Descripcion</label>
+    <textarea  maxlength="50" type="text" name="description" class="form-control form-control-solid mb-3 mb-lg-0"
+      [(ngModel)]="item.description"></textarea>
+    <div class="fv-plugins-message-container invalid-feedback"></div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-danger" (click)="closeModal()">Cancelar</button>
+  <button class="btn btn-primary" (click)="save()">Guardar</button>
+</div>
